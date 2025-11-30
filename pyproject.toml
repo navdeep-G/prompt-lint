@@ -28,7 +28,7 @@ Homepage = "https://github.com/your-username/prompt-lint"
 prompt-lint = "prompt_lint.cli:main"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = {"" = "."}
 
 [tool.setuptools.packages.find]
 where = ["src"]
