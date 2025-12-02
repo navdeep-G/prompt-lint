@@ -1,0 +1,20 @@
+# Example configuration for prompt-lint
+
+[rules.conflicting-length]
+enabled = true
+severity = "warning"
+short_keywords = ["brief", "short", "succinct"]
+long_keywords  = ["detailed", "thorough", "exhaustive"]
+
+[rules.unbounded-length]
+enabled = true
+severity = "warning"
+phrases = [
+  "as much as you can",
+  "write as much as possible",
+  "as much detail as possible",
+]
+
+[rules.no-format-specified]
+enabled = true
+severity = "info"
