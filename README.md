@@ -438,4 +438,4 @@ Status
 
 This is an early, experimental tool intended as a lightweight helper for people building LLM-backed applications.
 
-Contributions, rule ideas, and issues are welcome. 🙌
+Contributions, rule ideas, and issues are welcome.
