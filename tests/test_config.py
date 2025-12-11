@@ -13,7 +13,7 @@ def test_config_can_disable_rule_and_override_severity():
     )
 
     # Sanity check: defaults should trigger both rules
-    base_issues = lint_prompt(prompt, rules=ALL_RULES, load_config_from_disk=False)
+    base_issues = lint_prompt(prompt, rules=ALL_RULES)
     base_rule_ids = {issue.rule_id for issue in base_issues}
     assert "conflicting-length" in base_rule_ids
     assert "unbounded-length" in base_rule_ids
@@ -38,7 +38,6 @@ def test_config_can_disable_rule_and_override_severity():
         prompt,
         rules=ALL_RULES,
         config=config,
-        load_config_from_disk=False,
     )
 
     rule_ids = {issue.rule_id for issue in issues}
@@ -47,9 +46,7 @@ def test_config_can_disable_rule_and_override_severity():
 
     # Check the severity override is honored
     unbounded_severities = {
-        issue.severity
-        for issue in issues
-        if issue.rule_id == "unbounded-length"
+        issue.severity for issue in issues if issue.rule_id == "unbounded-length"
     }
     assert unbounded_severities == {Severity.ERROR}
 
