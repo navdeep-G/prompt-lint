@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [
-  { name = "Navdeep Gill", email = "mr.navdeepgill@gmail.com" }
+  { name = "Your Name", email = "you@example.com" }
 ]
 keywords = ["llm", "prompt", "lint", "ai", "developer-tools"]
 classifiers = [
@@ -28,7 +28,7 @@ Homepage = "https://github.com/your-username/prompt-lint"
 prompt-lint = "prompt_lint.cli:main"
 
 [tool.setuptools]
-package-dir = {"" = "."}
+package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
