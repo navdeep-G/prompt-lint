@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=77.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,27 +8,29 @@ version = "0.1.0"
 description = "Static linter for LLM prompt strings."
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "MIT" }
+license = "Apache-2.0"
+
 authors = [
-  { name = "Your Name", email = "you@example.com" }
+  { name = "Navdeep Gill", email = "mr.navdeepgill@gmail.com" },
 ]
+
 keywords = ["llm", "prompt", "lint", "ai", "developer-tools"]
+
 classifiers = [
   "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
-  "Topic :: Software Development :: Quality Assurance"
+  "Topic :: Software Development :: Quality Assurance",
 ]
 
 [project.urls]
-Homepage = "https://github.com/your-username/prompt-lint"
+Homepage = "https://github.com/navdeep-G/prompt-lint"
 
 [project.scripts]
 prompt-lint = "prompt_lint.cli:main"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+# Flat layout: package directory is the repo root,
+# and the only package is `prompt_lint`.
+packages = ["prompt_lint"]
 
-[tool.setuptools.packages.find]
-where = ["src"]
